@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+  if (!localStorage.getItem("token")) {
+    window.location.href = "login.html";
+  }
+</script>
+  <h1>Lead Dashboard</h1>
+
+  <form id="leadForm">
+    <input id="name" placeholder="Name">
+    <input id="emailLead" placeholder="Email">
+    <input id="phone" placeholder="Phone">
+    <select id="status">
+      <option>New</option>
+      <option>Contacted</option>
+      <option>Converted</option>
+    </select>
+    <button>Add Lead</button>
+  </form>
+
+  <ul id="leadList"></ul>
+
+  <canvas id="leadChart"></canvas>
+
+  <h2>Dashboard</h2>
+
+<div class="stats">
+  <div class="card">
+    <h3>Total Users</h3>
+    <p id="users">0</p>
+  </div>
+
+  <div class="card">
+    <h3>Total Contacts</h3>
+    <p id="contacts">0</p>
+  </div>
+
+  <div class="card">
+    <h3>Today’s Messages</h3>
+    <p id="today">0</p>
+  </div>
+</div>
+
+<script src="dashboard.js"></script>
+
+
+<script src="app.js"></script>
+</body>
+</html>
