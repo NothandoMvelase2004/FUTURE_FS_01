@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lead Management System 
 
 A full-stack Lead Management System built with **Node.js, Express, MySQL, and Vanilla JavaScript**.
@@ -27,3 +28,4 @@ cd backend
 npm install
 node server.js
  
+=======

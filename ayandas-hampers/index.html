@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayanda's Hampers</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <section class="header" id="header">
+        <section class="container">
+            <nav>
+            <ul id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </nav>
+            <section class="home">
+            <h1>Welcome to,</h1>
+            <h3><span>Ayanda's </span> Hampers and Picnics</h3>
+            </section>
+        </section> 
+    </section>
+
+    <section class="about" id="about">
+        <section class="container">
+            <section class="row">
+                <section class="col-1">
+                    <h3 class="sub-title">Ayanda's Hampers and Picnics</h3>
+                </section>
+                <section class="col-2">
+                    <p>We are a local business specializing in hampers and picnics.
+                        We do family, kids, and couples picnics at an affordable prices for all.
+                        Our services are sectioned into 3 parts picnics, hamper (kids), and hamper (adults).
+                        We offer deliveries for locals (Hmapers), If you not local call or message the number below...
+                    </p>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <section class="products" id="products">
+        <section class="container">
+                <h1 class="sub-title">Products</h1>
+                <section id="product-list">
+                    <section class="prod">
+                    <img src="images/picnic.png">
+                    <section class="layer">
+                        <h3>Picnics</h3>
+                        <p>
+                            Deco: R550 <br>
+                            CoolerBox: R60 <br>
+                            Flower bouquet: R180-R200 <br>
+                            Snack and drinks (Depends on your preferences) <br>
+                            Food (Negotiable)
+                        </p>
+                        <button type="submit"><a href="tel:+27634466077"> Order Now!!</a></button>
+                    </section>
+                 </section>
+                 <section class="prod">
+                    <img src="images/adults.png">
+                    <section class="layer">
+                        <h3>Hamper for adults</h3>
+                        <p>
+                            4 items: R450 <br>
+                            6 items: R550 <br>
+                            8 items: R650 <br>
+                            12 items: R700 <br>
+                        </p>
+                        <button type="submit"><a href="tel:+27634466077"> Order Now!!</a></button>
+                    </section>
+                 </section>
+                 <section class="prod">
+                    <img src="images/kids.jpg">
+                    <section class="layer">
+                        <h3>Hamper for kids</h3>
+                        <p>
+                            4 items: R350 <br>
+                            6 items: R40 <br>
+                            8 items: R450 <br>
+                            12 items: R550 <br>
+                        </p>
+                        <button type="submit"><a href="tel:+27634466077"> Order Now!!</a></button>
+                    </section>
+                 </section>
+            </section>
+        </section>
+    </section>
+
+    <section class="contact" id="contact">
+        <section class="container">
+            <section class="row">
+                <section class="contact-left">
+                    <h1 class="sub-title">Contact Us...</h1>
+                        <p> <i class="fa-regular fa-envelope"></i>ayandahamper@gmail.com</p>
+                        <p> <i class="fa-regular fa-phone"></i>+27799851282</p>
+                        <section class="s-icons">
+                            <a href="https://facebook.com/ayanda ngubane"><i class="fab fa-facebook"></i></a>
+                            <a href="https://wa.me/27799851262?text=Hi, welcome to Ayanda's Hampers and Picnics."><i class="fab fa-whatsapp"></i></a>
+                        </section>
+                </section>
+                <section class="contact-right">
+                    <form id="contactForm" method="post">
+                        <input type="text" name="name" id="name" placeholder="Your name.." required>
+                        <input type="tel" name="phone" id="phone" placeholder="Your cell number" required>
+                        <textarea name="msg" id="" rows="10" placeholder="Your message"></textarea>
+                        
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <script>
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const responseText = document.getElementById('formResponse');
+    responseText.innerText = 'Sending...';
+
+    try {
+        const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value
+            })
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+            responseText.style.color = 'green';
+            responseText.innerText = 'Message sent successfully!';
+            document.getElementById('contactForm').reset();
+        } else {
+            responseText.style.color = 'red';
+            responseText.innerText = data.error || 'Something went wrong';
+        }
+
+    } catch (err) {
+        responseText.style.color = 'red';
+        responseText.innerText = 'Server error. Please try again.';
+    }
+});
+</script>
+
+
+    <section class="copyright">
+        <p>Copyright &copy; Ayanda's Hampers and Picnics 2026.</p>
+    </section>
+    
+    
+</body>
+</html>
