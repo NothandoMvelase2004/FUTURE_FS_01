@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nothando's Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/51e8f865e7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="header">
+        <section id="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-light fa-backward" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-light fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <section class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hi, I'm <span>Nothando Mthembu </span><br>From South Africa</h1>
+            </section>
+        </section>
+
+    </section>
+    <section class="about" id="about">
+        <section class="container">
+            <section class="row">
+                <section class="about-col-1">
+                    <img src="images/user.png">
+                </section>
+                <section class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I am Nothando Mthembu a third year student from Richfield,
+                            ambitious in IT, an aspiring full-stack developer 
+                            with a strong foundation in C/C++, Python, PHP and Database management skills(MySQL / MangoDB).
+                            </p> <br>
+                            <p>
+                            Proficient in HTML, CSS and JavaScript. Seeking an entry-level job or internships in Software/Web developer role 
+                            to apply my cross-platform coding expertise to build scalable, responsive, user-centric/friendly applications and web solutions.
+
+                        </p>
+
+                        <section class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education & Certification</p>
+                        </section>
+                        <section class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Full Stack Development</span><br> Use front-end and back-end development</li>
+                                <li><span>Web Developement</span><br>Developing and designing web applications</li>
+                                <li><span> Software Developer</span><br>Developing and designing software applications</li>
+                            </ul>
+                        </section>
+                        <section class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2026 - present</span><br> Intern - Full Stack Development at Future Interns</li>
+                                
+                            </ul>
+                        </section>
+                        <section class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2024 - present</span><br> DIT from Richfield Graduate Institution of Technology</li>
+                                <li><span>2025</span><br>Certificate in Full Stack Development from ITvarsity (FNB App Academy 2025)</li>
+                                <li><span> 2025 - 2026</span><br>Certificate in Diploma in Computer Science from Upskillist</li>
+                            </ul>
+                        </section>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <section id="services">
+        <section class="containter">
+            <h1 class="sub-title"> My Services</h1>
+            <section class="services-list">
+                <section>
+                    <h2>Full Stack Development</h2>
+                    <p>Building complete web applications with both front-end and back-end technologies, ensuring seamless user experiences.</p>
+                </section>
+                <section>
+                    <h2>Web Development</h2>
+                    <p>Creating responsive and interactive websites using modern HTML, CSS, and JavaScript frameworks.</p>
+                </section>
+                <section>
+                    <h2>Software Development</h2>
+                    <p>Developing custom software solutions tailored to specific business needs, from concept to deployment.</p>
+                </section>
+            </section>
+        </section>
+        
+    </section>
+
+    <section id="portfolio">
+        <section class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <section class="project-list">
+                <section class="project">
+                    <img src="images/proj1.png">
+                    <section class="layer">
+                        <h3>Portfolio Website</h3>
+                        <p>This website showcase more about my skills, profession and education along with my projects</p>
+                    </section>
+                </section>
+                <section class="project">
+                    <img src="images/proj2.jpg">
+                    <section class="layer">
+                        <h3>Client Lead Management Sytem (Mini CRM)</h3>
+                        <p>This website  manages client leads generated from website contact forms.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </section>
+                </section>
+                <section class="project">
+                    <img src="images/proj3.jpg">
+                    <section class="layer">
+                        <h3>Local Business website (Ayanda's hampers)</h3>
+                        <p>This website tells you more about Ayanda's hampers and what they do</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </section>
+                </section>
+            </section><a href="#" class="btn">See More</a>
+        </section>
+    </section>
+
+    <section class="contact" id="contact">
+        <section class="container">
+            <section class="row">
+                <section class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-regular fa-envelope"></i>nothandomthembu2004@outlook.com</p>
+                    <p><i class="fa-solid fa-mobile-screen"></i>+27634466077</p>
+                    <section class="social-icons">
+                        <a href="https://www.facebook.com/share/1Ak4bRWFiV/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/mvelase.nothando?igsh=dmFxZWw0eHljaHow"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/nothando-mthembu-06387826b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/27634466077?text=Hi, this is Nothando how can i help you?"><i class="fab fa-whatsapp"></i></a>
+                    </section>
+                    <a href="cv/nothando mthembu's Resume.pdf" download class="btn btn2" >My Resume</a>
+                </section>
+                <section class="contact-right">
+                    <form id="contactForm" action="http://localhost:3000/contact" method="post">
+                        <input type="text" name="name" placeholder="your name..." required>
+                        <input type="email" name="email" placeholder="your email..." required>
+                        <textarea name="message" rows="7" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </section>
+            </section>
+        </section>
+        <section class="copyright">
+            <p>Copyright &copy; Nothando Mthembu 2026 <i class="fas fa-heart"></i>.</p>
+        </section>
+    </section>
+<script src="index.js"></script>
+</body>
+</html>
