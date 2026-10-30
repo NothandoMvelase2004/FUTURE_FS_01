@@ -1,0 +1,164 @@
+/* ==========================================
+   THANDOLEADS - SETTINGS PAGE
+========================================== */
+
+.settings-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.settings-card {
+    background: #111827;
+    border: 1px solid #263044;
+    border-radius: 14px;
+    padding: 28px;
+}
+
+.settings-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.settings-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #2e1c52;
+    color: #c4b5fd;
+}
+
+.settings-card-header h2 {
+    font-size: 18px;
+    margin: 0 0 7px;
+}
+
+.settings-card-header p {
+    font-size: 12px;
+    color: #94a3b8;
+    margin: 0;
+}
+
+.settings-form-group {
+    margin-bottom: 20px;
+}
+
+.settings-form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-bottom: 10px;
+}
+
+.settings-form-group input {
+    width: 100%;
+    padding: 13px 15px;
+    background: #0b1220;
+    border: 1px solid #334155;
+    border-radius: 9px;
+    color: #f8fafc;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.settings-form-group input:focus {
+    border-color: #8b5cf6;
+}
+
+.settings-form-group input:disabled {
+    background: #1e293b;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.settings-card .add-lead-button {
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.settings-card .add-lead-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.password-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #a78bfa;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.account-info > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #263044;
+}
+
+.account-info span {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.account-info strong {
+    font-size: 13px;
+    color: #f8fafc;
+}
+
+.account-info .account-active {
+    color: #4ade80;
+}
+
+.success-message {
+    padding: 14px;
+    margin-bottom: 20px;
+    background: #052e16;
+    color: #86efac;
+    border: 1px solid #166534;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+.error-message {
+    padding: 14px;
+    margin-bottom: 20px;
+    background: #450a0a;
+    color: #fca5a5;
+    border: 1px solid #991b1b;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+    .settings-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .settings-card {
+        padding: 20px;
+    }
+}

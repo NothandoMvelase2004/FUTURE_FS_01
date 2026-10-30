@@ -1,0 +1,393 @@
+.followups-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #0b1120;
+  color: #f8fafc;
+}
+
+.followups-main {
+  flex: 1;
+  min-width: 0;
+  padding: 35px;
+}
+
+.followups-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.followups-eyebrow {
+  color: #818cf8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.followups-header h1 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.followups-header p {
+  color: #94a3b8;
+}
+
+.followups-add-btn,
+.followups-save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.followups-add-btn:hover,
+.followups-save:hover {
+  background: #4f46e5;
+}
+
+.followups-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.followups-stat-card {
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.followups-stat-card p {
+  color: #94a3b8;
+  margin: 14px 0 8px;
+  font-size: 14px;
+}
+
+.followups-stat-card h2 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.followups-stat-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.followups-stat-icon.total {
+  color: #818cf8;
+  background: #312e81;
+}
+
+.followups-stat-icon.upcoming {
+  color: #38bdf8;
+  background: #082f49;
+}
+
+.followups-stat-icon.overdue {
+  color: #fb7185;
+  background: #4c0519;
+}
+
+.followups-stat-icon.completed {
+  color: #4ade80;
+  background: #052e16;
+}
+
+.followups-panel {
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.followups-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.followups-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #0b1120;
+  border: 1px solid #334155;
+  border-radius: 9px;
+  padding: 0 12px;
+  color: #94a3b8;
+}
+
+.followups-search input {
+  width: 100%;
+  padding: 12px 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.followups-toolbar select {
+  background: #0b1120;
+  border: 1px solid #334155;
+  color: white;
+  padding: 12px;
+  border-radius: 9px;
+}
+
+.followups-refresh-btn {
+  background: #1e293b;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.followups-table-wrapper {
+  overflow-x: auto;
+}
+
+.followups-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.followups-table th,
+.followups-table td {
+  padding: 18px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.followups-table th {
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.followups-table td {
+  font-size: 14px;
+}
+
+.followups-client {
+  font-weight: 600;
+}
+
+.followups-description {
+  max-width: 300px;
+  color: #cbd5e1;
+}
+
+.followups-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.followups-badge.upcoming {
+  color: #38bdf8;
+  background: #082f49;
+}
+
+.followups-badge.overdue {
+  color: #fb7185;
+  background: #4c0519;
+}
+
+.followups-badge.completed {
+  color: #4ade80;
+  background: #052e16;
+}
+
+.followups-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.followups-actions button {
+  background: #1e293b;
+  border: none;
+  color: #cbd5e1;
+  border-radius: 7px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.followups-actions button:hover {
+  background: #334155;
+}
+
+.followups-actions button.complete {
+  color: #4ade80;
+}
+
+.followups-actions button.delete {
+  color: #fb7185;
+}
+
+.followups-empty {
+  text-align: center;
+  color: #94a3b8;
+  padding: 40px !important;
+}
+
+.followups-success,
+.followups-error {
+  padding: 14px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+}
+
+.followups-success {
+  background: #052e16;
+  color: #86efac;
+}
+
+.followups-error {
+  background: #450a0a;
+  color: #fca5a5;
+}
+
+.followups-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.followups-modal {
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.followups-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.followups-modal-header h2 {
+  margin: 0;
+}
+
+.followups-modal-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.followups-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.followups-modal label {
+  font-size: 13px;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.followups-modal input,
+.followups-modal select,
+.followups-modal textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #0b1120;
+  border: 1px solid #334155;
+  color: white;
+  padding: 12px;
+  border-radius: 9px;
+  outline: none;
+  font: inherit;
+}
+
+.followups-modal input:focus,
+.followups-modal select:focus,
+.followups-modal textarea:focus {
+  border-color: #6366f1;
+}
+
+.followups-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.followups-cancel {
+  background: #334155;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.followups-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1100px) {
+  .followups-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .followups-main {
+    padding: 20px;
+  }
+
+  .followups-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .followups-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .followups-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .followups-search {
+    flex-basis: 100%;
+  }
+}
